@@ -14,7 +14,10 @@ class VideogameController extends Controller
      */
     public function index()
     {
-        //
+        $videogames = Videogame::paginate(5);
+        // dd($videogames);
+        return view('admin.videogames.index', compact("videogames"));
+
     }
 
     /**
@@ -46,7 +49,7 @@ class VideogameController extends Controller
      */
     public function show(Videogame $videogame)
     {
-        //
+    
     }
 
     /**
